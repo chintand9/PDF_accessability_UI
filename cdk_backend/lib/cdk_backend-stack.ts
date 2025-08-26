@@ -37,7 +37,7 @@ export class CdkBackendStack extends cdk.Stack {
     // --------- Create Amplify App (WITHOUT referencing the domain yet) ----------
     const amplifyApp = new amplify.App(this, 'pdfui', {
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
-        owner: 'ASUCICREPO',
+        owner: 'chintand9',
         repository: 'PDF_accessability_UI',
         oauthToken: githubToken_secret_manager.secretValue
       }),
@@ -80,7 +80,7 @@ export class CdkBackendStack extends cdk.Stack {
       stage: 'PRODUCTION'
     });
 
-    const domainPrefix = 'pdf-ui-auth'; // must be globally unique in that region
+    const domainPrefix = 'pdf-ui-auth-cd9'; // must be globally unique in that region
     const Default_Group = 'DefaultUsers';
     const Amazon_Group = 'AmazonUsers';
     const Admin_Group = 'AdminUsers';
